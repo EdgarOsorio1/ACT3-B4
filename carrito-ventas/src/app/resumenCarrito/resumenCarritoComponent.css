@@ -1,0 +1,68 @@
+.panel {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #1c2f5e;
+}
+
+.vacio {
+  padding: 20px 0;
+  text-align: center;
+  color: #777;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #1c2f5e;
+  color: white;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.mini {
+  width: 26px;
+  height: 26px;
+  margin: 0 4px;
+  background-color: #1c2f5e;
+}
+
+.quitar {
+  padding: 6px 10px;
+  background-color: #e63946;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 18px;
+  color: #1c2f5e;
+}
+
+.vaciar {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #999;
+}

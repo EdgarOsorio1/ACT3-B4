@@ -1,0 +1,11 @@
+<section class="panel">
+  <h2>Productos</h2>
+
+  <div class="tarjeta" *ngFor="let p of productos">
+    <div>
+      <strong>{{ p.nombre }}</strong>
+      <span class="precio">{{ p.precio | currency:'GTQ':'symbol-narrow' }}</span>
+    </div>
+    <button (click)="agregar(p)">Agregar</button>
+  </div>
+</section>

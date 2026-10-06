@@ -1,0 +1,41 @@
+<section class="panel">
+  <h2>Carrito</h2>
+
+  <ng-container *ngIf="items$ | async as items">
+
+    <p class="vacio" *ngIf="items.length === 0">El carrito está vacío.</p>
+
+    <table *ngIf="items.length > 0">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{ item.producto.nombre }}</td>
+          <td>{{ item.producto.precio | currency:'GTQ':'symbol-narrow' }}</td>
+          <td>
+            <button class="mini" (click)="disminuir(item)">-</button>
+            {{ item.cantidad }}
+            <button class="mini" (click)="aumentar(item)">+</button>
+          </td>
+          <td>{{ item.producto.precio | subtotal: item.cantidad | currency:'GTQ':'symbol-narrow' }}</td>
+          <td><button class="quitar" (click)="eliminar(item.producto.id)">Quitar</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total" *ngIf="items.length > 0">
+      <span>Total:</span>
+      <strong>{{ items | totalCarrito | currency:'GTQ':'symbol-narrow' }}</strong>
+    </div>
+
+    <button class="vaciar" *ngIf="items.length > 0" (click)="vaciar()">Vaciar carrito</button>
+
+  </ng-container>
+</section>

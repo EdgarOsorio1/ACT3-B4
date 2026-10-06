@@ -1,0 +1,41 @@
+.panel {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #1c2f5e;
+}
+
+.tarjeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.precio {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  color: #2a9d8f;
+}
+
+button {
+  padding: 8px 14px;
+  background-color: #1c2f5e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2d4a8a;
+}
